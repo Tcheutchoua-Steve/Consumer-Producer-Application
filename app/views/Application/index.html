@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Enter a message to kafka</h1>
+
+
+ <form action="@{Application.sendMessage()}" method="POST">
+ 	<p> Enter title: &nbsp;
+            <input type="text" name="newTitle" placeholder="title"/>
+    </p>
+    Content:&nbsp;
+    <p>
+        <textarea name="newContent" placeholder="Message"> </textarea>
+    </p>
+    
+     <input type="submit" value="Send Message!" />
+ </form>
